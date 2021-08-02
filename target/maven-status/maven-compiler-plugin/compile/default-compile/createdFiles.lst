@@ -1,0 +1,9 @@
+at\adridi\easymailreminder\controller\MailReminderController.class
+at\adridi\easymailreminder\EasyMailReminderApplication.class
+at\adridi\easymailreminder\repository\MailReminderRepository.class
+at\adridi\easymailreminder\util\MailReminderTask.class
+at\adridi\easymailreminder\service\MailReminderService$1.class
+at\adridi\easymailreminder\model\DeleteReminder.class
+at\adridi\easymailreminder\service\MailReminderService.class
+at\adridi\easymailreminder\model\MailReminder.class
+at\adridi\easymailreminder\util\DataValueNotFoundException.class

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:th="http://www.thymeleaf.org" 
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">    
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link th:href="@{/styles/style/main.css}" rel="stylesheet" />
+        <title>New - Easy Mail Reminder</title>
+    </head>
+    <body>
+        <div>
+            <h3>Create Mail Reminder</h3>
+            <div class="line-menu">
+                <a class="line-menu-item line-menu-active" href="/create">Create Reminder</a>
+                <a class="line-menu-item" href="/delete">Delete Reminder</a>
+            </div>
+            <div class="form-reminder">
+                <form action="#" th:action="@{/create}" th:object="${mailReminder}" method="POST">
+                    <div class="form-line">
+                        <div class="form-title">Reminder Title:</div>
+                        <div class="form-input"><input type="text" th:field="*{title}"/></div>
+                    </div>
+                    <div class="form-line">
+                        <div class="form-title">Email Address (for Reminder):</div>
+                        <div class="form-input"><input type="text" th:field="*{emailAddress}"/></div>
+                    </div>
+                    <div class="form-line">
+                        <div class="form-title">Date (dd.MM.yyyy ex.: 17.02.2021):</div>
+                        <div class="form-input">><input type="date" th:field="{reminderDate}" th:value="*{reminderDate}"/></div>
+                    </div>
+                    <div class="form-line">
+                        <div class="form-title">Frequency:</div>
+                        <div class="form-input">
+                            <select th:field="*{frequency}">
+                                <option th:value="0" th:text="One Time">Active</option>
+                                <option th:value="1" th:text="Daily"></option>
+                                <option th:value="2" th:text="Weekly"></option>
+                                <option th:value="3" th:text="Monthly"></option>
+                            </select> 
+                        </div>
+                    </div>
+
+                    <div class="form-line">
+                        <button type="submit" class="submit-button">Create</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

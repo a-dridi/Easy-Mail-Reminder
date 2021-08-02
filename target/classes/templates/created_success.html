@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:th="http://www.thymeleaf.org" 
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">    
+    <head>
+        <title>Created - Easy Mail Reminder</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link th:href="@{/styles/style/main.css}" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>Created - Mail Reminder</h3>
+        <div class="line-menu">
+            <a class="line-menu-item line-menu-active" href="/create">Create Reminder</a>
+            <a class="line-menu-item" href="/delete">Delete Reminder</a>
+        </div>
+
+        <div class="reminder-view">
+            <h3 class="reminder-header">OK. Reminder was created. </h3>
+            <div class="view-line">
+                <div class="view-title">
+                    Reminder Title:
+                </div>
+                <div class="view-description">
+                    ${mailReminder.title}
+                </div>
+            </div>
+            <div class="view-line">
+                <div class="view-title">
+                    Reminder sent to:
+                </div>
+                <div class="view-description">
+                    ${mailReminder.emailAddress}
+                </div>
+            </div>
+            <div class="view-line">
+                <div class="view-title">
+                    Date:
+                </div>
+                <div class="view-description">
+                    ${mailReminder.date.toString()}
+                </div>
+            </div>
+            <div class="view-line">
+                <div class="view-title">
+                    Frequency:
+                </div>
+                <div class="view-description">
+                    ${mailReminder.frequency}
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>

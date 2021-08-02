@@ -1,0 +1,63 @@
+/* 
+    Created on : 29.07.2021, 00:06:48
+    Author     : A.Dridi
+*/
+
+
+.form-line{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.form-title{
+    margin-right: 7px;
+}
+
+.submit-button{
+    background-color: green !important;
+    color: white;
+    font-weight: bold;
+    border-radius: 2px;
+}
+
+.line-menu{
+    margin: 10px 0 10px 0;
+}
+
+.line-menu-item{
+    margin-right: 5px;
+}
+
+.line-menu-active{
+    text-decoration: underline;
+    color: brown;
+    font-weight: bold;
+}
+
+.reminder-header{
+    color: green;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.view-line{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 5px;
+}
+
+.view-title{
+    font-weight: bold;
+    margin-right: 6px;
+}
+
+.success-header{
+    color: green;
+    font-weight: bold;
+}
+
+.error-header{
+    color: red;
+    font-weight: bold;
+}

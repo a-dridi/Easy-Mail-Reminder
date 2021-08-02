@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:th="http://www.thymeleaf.org" 
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">    
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link th:href="@{/styles/style/main.css}" rel="stylesheet" />
+        <title>Delete - Easy Mail Reminder</title>
+    </head>
+    <body>
+        <div>
+            <h3>Delete Mail Reminder</h3>
+            <div class="line-menu">
+                <a class="line-menu-item" href="/create">Create Reminder</a>
+                <a class="line-menu-item line-menu-active" href="/delete">Delete Reminder</a>
+            </div>
+            <div class="form-reminder">
+                <form action="#" th:action="@{'/deleteReminder/' + ${deletedReminder.reminderId} + '/' + ${deletedReminder.email}}" th:object="${deletedReminder}" method="GET">
+                    <div class="form-line">
+                        <div class="form-title">Reminder ID:</div>
+                        <div class="form-input"><input type="text" th:field="*{reminderId}"/></div>
+                    </div>
+                    <div class="form-line">
+                        <div class="form-title">Email Address:</div>
+                        <div class="form-input"><input type="text" th:field="*{email}"/></div>
+                    </div>
+                    <div class="form-line">
+                        <button type="submit" class="submit-button">Delete</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
